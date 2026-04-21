@@ -446,7 +446,12 @@ const Index = () => {
             {
               n: "01",
               t: "Регистрация на RoboForex",
-              d: "Перейдите по реферальной ссылке в нашем канале Telegram. Заполните регистрационную форму: имя, email, телефон. Подтвердите email. Зайдите в личный кабинет → Настройки → Профиль и загрузите фото паспорта для верификации (обычно занимает до 1 часа).",
+              d: <>
+                Перейдите по реферальной ссылке: <a href="https://my28.roboforex.org/en/?a=goldturbo" target="_blank" rel="noreferrer" className="text-primary underline hover:text-gold-gradient">https://my28.roboforex.org/en/?a=goldturbo</a>. 
+                Заполните регистрационную форму: имя, email, телефон. 
+                <strong className="text-foreground">Важно!</strong> При открытии счёта выберите <strong className="text-foreground">MT4 ProCent с плечом 1:1000</strong>. 
+                Подтвердите email и завершите верификацию (загрузите фото паспорта в профиле).
+              </>,
             },
             {
               n: "02",

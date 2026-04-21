@@ -20,12 +20,13 @@ const Index = () => {
               GOLD<span className="text-gold-gradient">TURBO</span>
             </span>
           </a>
-          <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
             <a href="#problem" className="transition-colors hover:text-primary">Проблема</a>
             <a href="#solution" className="transition-colors hover:text-primary">Решение</a>
             <a href="#how" className="transition-colors hover:text-primary">Как работает</a>
             <a href="#copy" className="transition-colors hover:text-primary">Копитрейдинг</a>
             <a href="#start" className="transition-colors hover:text-primary">Старт</a>
+            <a href="#instructions" className="transition-colors hover:text-primary">Инструкции</a>
             <a href="#faq" className="transition-colors hover:text-primary">FAQ</a>
           </nav>
           <Button asChild variant="hero" size="sm">
@@ -428,6 +429,71 @@ const Index = () => {
               </ul>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* INSTRUCTIONS */}
+      <section id="instructions" className="container py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">Инструкции</p>
+          <h2 className="mt-3 font-display text-4xl font-extrabold md:text-5xl">
+            Подробное <span className="text-gold-gradient">руководство</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground">Следуйте инструкциям шаг за шагом для успешного подключения</p>
+        </div>
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
+          {[
+            {
+              n: "01",
+              t: "Регистрация на RoboForex",
+              d: "Перейдите по реферальной ссылке в нашем канале Telegram. Заполните регистрационную форму: имя, email, телефон. Подтвердите email. Зайдите в личный кабинет → Настройки → Профиль и загрузите фото паспорта для верификации (обычно занимает до 1 часа).",
+            },
+            {
+              n: "02",
+              t: "Пополнение счёта",
+              d: "В личном кабинете выберите раздел Пополнение счёта. Доступные способы: банковская карта (Visa/MasterCard), банковский перевод, криптовалюта, электронные кошельки (WebMoney, Skrill и др.). Минимум для копитрейдинга — $100.",
+            },
+            {
+              n: "03",
+              t: "Запрос на подключение",
+              d: "Напишите нам в Telegram-поддержку (@GoldTurboSupport) для получения реферальной ссылки на копитрейдинг. Это важно — комиссия брокера составит всего 10$ в месяц вместо 20$ по общей ссылке.",
+            },
+            {
+              n: "04",
+              t: "Настройка копирования",
+              d: "В личном кабинете RoboForex перейдите в раздел CopyFX. Найдите стратегию GoldTurbo. Нажмите 'Подключить' и выберите ваш счёт. Установите распределение средств 'Пропорционально' и задайте лимиты: риск на сделку до 2%, стоп при просадке 20%.",
+            },
+            {
+              n: "05",
+              t: "Запуск копирования",
+              d: "Проверьте настройки: сумма копирования соответствует вашему балансу, риски установлены правильно. Нажмите 'Начать копирование'. Сделки начнут копироваться автоматически в течение нескольких минут.",
+            },
+            {
+              n: "06",
+              t: "Мониторинг и управление",
+              d: "Следите за статистикой в личном кабинете RoboForex или через мобильное приложение. Вы можете остановить копирование в любой момент. Для вопросов и поддержки всегда доступен наш Telegram-канал @GoldTurboSupport.",
+            },
+          ].map((s) => (
+            <div key={s.t} className="relative rounded-2xl border border-border/50 bg-card-gradient p-6 transition-smooth hover:border-gold">
+              <div className="absolute -top-3 left-6 rounded-full bg-gold-gradient px-4 py-1 text-xs font-bold text-primary-foreground">
+                {s.n}
+              </div>
+              <h3 className="mt-4 font-display text-xl font-bold">{s.t}</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
+          <Button asChild variant="hero" size="lg">
+            <a href={CHANNEL_URL} target="_blank" rel="noreferrer">
+              <Send className="h-4 w-4" /> Получить ссылку в канале
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <a href={SUPPORT_URL} target="_blank" rel="noreferrer">
+              <MessageCircle className="h-4 w-4" /> Написать в поддержку
+            </a>
+          </Button>
         </div>
       </section>
 

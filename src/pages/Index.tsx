@@ -200,7 +200,7 @@ const Index = () => {
                       { l: "Распределение средств", v: "Пропорционально" },
                       { l: "Доходность в месяц", v: "от 10% до 30%" },
                       { l: "Минимальный депозит", v: "$100" },
-                    ].filter((r) => r.l.trim() && r.v.trim()).map((r) => (
+                    ].filter((r) => r.l.replace(/[\u200B-\u200D\uFEFF]/g, "").trim() && r.v.replace(/[\u200B-\u200D\uFEFF]/g, "").trim()).map((r) => (
                       <div key={r.l} className="flex items-center justify-between border-b border-border/50 pb-3 last:border-0">
                         <span className="text-sm text-muted-foreground">{r.l}</span>
                         <span className="font-display font-bold text-foreground">{r.v}</span>
@@ -330,7 +330,7 @@ const Index = () => {
                       { l: "Инструмент", v: "XAUUSD" },
                       { l: "Распределение средств", v: "Пропорционально" },
                       { l: "Мин. депозит", v: "$100" },
-                    ].filter((r) => r.l.trim() && r.v.trim()).map((r) => (
+                    ].filter((r) => r.l.replace(/[\u200B-\u200D\uFEFF]/g, "").trim() && r.v.replace(/[\u200B-\u200D\uFEFF]/g, "").trim()).map((r) => (
                       <div key={r.l} className="flex items-center justify-between rounded-lg px-4 py-3 transition-smooth hover:bg-card">
                         <span className="text-sm text-muted-foreground">{r.l}</span>
                         <span className="font-display font-bold">{r.v}</span>

@@ -328,8 +328,6 @@ const Index = () => {
                       { l: "Стратегия", v: "GoldTurbo Scalper" },
                       { l: "Инструмент", v: "XAUUSD" },
                       { l: "Распределение средств", v: "Пропорционально" },
-                      { l: "​", v: "​" },
-                      { l: "​", v: "​" },
                       { l: "Мин. депозит", v: "$100" },
                     ].map((r) => (
                       <div key={r.l} className="flex items-center justify-between rounded-lg px-4 py-3 transition-smooth hover:bg-card">

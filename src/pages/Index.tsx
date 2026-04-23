@@ -494,7 +494,7 @@ const Index = () => {
         <div className="mt-12 flex flex-wrap justify-center gap-4">
           <Button asChild variant="hero" size="lg">
             <a href={CHANNEL_URL} target="_blank" rel="noreferrer">
-              <Send className="h-4 w-4" /> Получить ссылку в канале
+              <Send className="h-4 w-4" /> Перейти в канал
             </a>
           </Button>
           <Button asChild variant="outline" size="lg">

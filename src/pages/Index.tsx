@@ -198,8 +198,6 @@ const Index = () => {
                     {[
                       { l: "Стратегия", v: "Скальпинг XAUUSD" },
                       { l: "Распределение средств", v: "Пропорционально" },
-                      { l: "​", v: "​" },
-                      { l: "​", v: "​" },
                       { l: "Минимальный депозит", v: "$100" },
                     ].map((r) => (
                       <div key={r.l} className="flex items-center justify-between border-b border-border/50 pb-3 last:border-0">
